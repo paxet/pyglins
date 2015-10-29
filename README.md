@@ -18,4 +18,4 @@ Using pyglins
 License
 -------
 
-Licensed under [MIT license](LICENSE.txt)
+Licensed under [MIT license](LICENSE)
