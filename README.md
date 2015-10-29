@@ -15,6 +15,13 @@ Using pyglins
         loaded_plugin = plugin()
         loaded_plugin.run()
 
+Installation
+------------
+
+::
+
+    pip install git+https://github.com/paxet/pyglins.git
+
 License
 -------
 
