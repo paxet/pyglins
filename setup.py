@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-
+import os
 from setuptools import find_packages, setup
 from pyglins import __version__, __description__
 
 
 def read_readme():
-    with open('README.md') as file:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as file:
         return file.read()
 
 
@@ -14,7 +14,7 @@ setup(name='pyglins',
       description=__description__,
       long_description=read_readme(),
       classifiers=[
-          'Development Status :: 1 - Pre-Alpha',
+          'Development Status :: 1 - Planning',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 3.4',
