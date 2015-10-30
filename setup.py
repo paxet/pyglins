@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
-import os
+
 from setuptools import find_packages, setup
 from pyglins import __version__, __description__
 
 
 def read_readme():
-    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as file:
-        return file.read()
+    try:
+        import pypandoc
+        description = pypandoc.convert('README.md', 'rst')
+    except (IOError, ImportError):
+        with open('README.md') as file:
+            description = file.read()
+    return description
 
 
 setup(name='pyglins',
