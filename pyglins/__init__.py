@@ -21,7 +21,7 @@ class MetaPlugin(type):
 
 class BasePlugin(metaclass=MetaPlugin):
     """
-    Base class for plugins
+    Base class for plugins. Will contain scanned plugins
     """
     def __init__(self):
         self.name = ''
@@ -30,10 +30,11 @@ class BasePlugin(metaclass=MetaPlugin):
         pass
 
 
-def scan_for_plugins(directory):
+def scan_for_plugins(directory: str):
     """
     This method will scan a directory passed as argument
     searching python files that extends BasePlugin
+    Plugins detected will be in BasePlugin.plugins
     """
     base_dir = pathlib.Path(directory)
     if base_dir.exists() and base_dir.is_dir():
