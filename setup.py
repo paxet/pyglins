@@ -5,12 +5,8 @@ from pyglins import __version__, __description__
 
 
 def read_readme():
-    try:
-        import pypandoc
-        description = pypandoc.convert('README.md', 'rst')
-    except (IOError, ImportError):
-        with open('README.md') as file:
-            description = file.read()
+    with open('README.rst') as file:
+        description = file.read()
     return description
 
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = '0.1.0.dev1'
+__version__ = '0.1.1.dev1'
 __description__ = 'Minimal plugin system for Python apps'
 
 import importlib
